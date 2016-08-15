@@ -14,5 +14,10 @@ namespace MVCWebApp_MyExp.Controllers
         {
             return View(new Person());
         }
+
+        public ActionResult SaveContacts(Person persons)
+        {
+            return View("Index");
+        }
     }
 }

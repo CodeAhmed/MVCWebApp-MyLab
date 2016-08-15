@@ -5,11 +5,17 @@
 }
 <h2>Person</h2>
 
-<p>
-    @Html.LabelFor(model => model.Name)
-    @Html.EditorFor(model => model.Name)
-</p>
+@using (Html.BeginForm("SaveContacts", "Home", FormMethod.Post))
+{
+    <p>
+        @Html.LabelFor(model => model.Name)
+        @Html.EditorFor(model => model.Name)
+    </p>
 
-<h2>Person Addresses</h2>
-@Html.EditorFor(model => model.Addresses)
+    <h2>Person Addresses</h2>
+    @Html.EditorFor(model => model.Addresses)
+    
+    <button class="btn btn-default" type="submit">Save</button>
+}
+
 
