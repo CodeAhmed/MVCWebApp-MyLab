@@ -1,0 +1,15 @@
+﻿@model MVCWebApp_MyExp.Models.Person
+
+@{
+    ViewBag.Title = "Person with Addresses";
+}
+<h2>Person</h2>
+
+<p>
+    @Html.LabelFor(model => model.Name)
+    @Html.EditorFor(model => model.Name)
+</p>
+
+<h2>Person Addresses</h2>
+@Html.EditorFor(model => model.Addresses)
+
