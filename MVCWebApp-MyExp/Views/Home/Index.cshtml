@@ -1,0 +1,37 @@
+﻿@model MVCWebApp_MyExp.Models.ObjectList
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<h2>Index</h2>
+
+@using (Html.BeginForm())
+{
+    @*<h3>Object List</h3>
+    @Html.EditorFor(x => x)*@
+
+    <h3>Object List of Item</h3>
+    <div id="object-list">
+        @Html.EditorFor(x => x.ObjList)
+    </div>
+
+        <input type="submit" />
+        <input type="button" id="add-object" value="Add" />
+}
+
+@section Scripts
+{
+    <script>
+        jQuery(document).ready(function ($) {
+            $('#add-object').on('click', function () {
+                jQuery.get('/Home/AddObject').done(function (html) {
+                    debugger;
+                    $('#object-list').append(html);
+                });
+            });
+        });
+    </script>
+}
+

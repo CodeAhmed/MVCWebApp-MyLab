@@ -1,0 +1,16 @@
+﻿@model MVCWebApp_MyExp.Models.ObjectItem
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="form-group">
+            @Html.LabelFor(x => x.ObjID)
+            @Html.TextBoxFor(x => x.ObjID, new { @class = "form-control" })
+            
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.ObjName)
+            @Html.TextBoxFor(x => x.ObjName, new { @class = "form-control" })
+            
+        </div>
+    </div>
+</div>
